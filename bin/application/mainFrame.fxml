@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainFrameController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainFrameController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -30,7 +30,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane fx:id="mainScreen" prefHeight="450.0" prefWidth="800.0" visible="false">
+            <AnchorPane fx:id="mainScreen" prefHeight="450.0" prefWidth="800.0">
                <children>
                   <ImageView fitHeight="490.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -48,13 +48,13 @@
                   <Button fx:id="OptionsB" layoutX="761.0" layoutY="411.0" mnemonicParsing="false" onAction="#showOptions" prefHeight="25.0" prefWidth="25.0" text="OPT" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="lessonsScreen" prefHeight="450.0" prefWidth="800.0">
+            <AnchorPane fx:id="lessonsScreen" prefHeight="450.0" prefWidth="800.0" visible="false">
                <children>
                   <SplitPane dividerPositions="0.29797979797979796" prefHeight="450.0" prefWidth="800.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <ListView prefHeight="450.0" prefWidth="235.0" />
+                              <ListView fx:id="lessonsL" prefHeight="450.0" prefWidth="235.0" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />

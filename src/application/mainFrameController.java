@@ -39,10 +39,11 @@ public class mainFrameController {
 	public void showLessons() throws FileNotFoundException{
 		mainScreen.setVisible(false);
 		ObservableList<String> lessonsList = FXCollections.observableArrayList();
-		csv_reader R = new csv_reader("/files/list.csv");
+		csv_reader R = new csv_reader("src/application/files/list.csv");
 		for (int i=1; i<=Integer.parseInt(R.vocFetcher(0,0)); i++){
 			lessonsList.addAll(R.vocFetcher(0,i));
 		}
+		System.out.println(lessonsList);
 		lessonsL.setItems(lessonsList);
 		lessonsScreen.setVisible(true);
 	}
