@@ -1,5 +1,6 @@
 package application;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -119,7 +120,7 @@ public class mainFrameController implements Initializable {
 
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
-			R = new csv_reader("src/application/files/list.csv");
+			R = new csv_reader("application/files/list.csv");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -139,10 +140,10 @@ public class mainFrameController implements Initializable {
 		correctWords.clear();
 
 		try {
-			R = new csv_reader("src/application/files/"+ lessonSelect.getSelectionModel().getSelectedItem() + ".csv");
+			R = new csv_reader("application/files/"+ lessonSelect.getSelectionModel().getSelectedItem() + ".csv");
 		} catch (FileNotFoundException e) {
 			try {
-				R = new csv_reader("src/application/files/lesson0.csv");
+				R = new csv_reader("application/files/lesson0.csv");
 			} catch (FileNotFoundException e2) {
 			}
 		}
@@ -200,10 +201,10 @@ public class mainFrameController implements Initializable {
 		mainScreen.setVisible(false);
 
 		try {
-			R = new csv_reader("src/application/files/"+ lessonSelect.getSelectionModel().getSelectedItem() + ".csv");
+			R = new csv_reader("application/files/"+ lessonSelect.getSelectionModel().getSelectedItem() + ".csv");
 		} catch (FileNotFoundException e) {
 			try {
-				R = new csv_reader("src/application/files/lesson0.csv");
+				R = new csv_reader("application/files/lesson0.csv");
 			} catch (FileNotFoundException e2) {
 			}
 		}
