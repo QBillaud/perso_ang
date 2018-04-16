@@ -28,6 +28,10 @@ public class csv_reader {
 		return fileMatrice.get(2*i+j);
 	}
 
+	public String fourFetcher(int i, int j){
+		return fileMatrice.get(4*i+j);
+	}
+
 	public String gramChoiceFetcher(int i, int j){
 		return fileMatrice.get(7*i+j);
 	}

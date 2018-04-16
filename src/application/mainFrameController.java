@@ -18,7 +18,7 @@ public class mainFrameController {
 	int num = 0;
 	int numDecal = 0;
 	csv_reader R;
-	ObservableList<String> correctWords;
+	ObservableList<String> correctWords = FXCollections.observableArrayList();
 
 	@FXML
 	private AnchorPane mainScreen;
@@ -71,27 +71,29 @@ public class mainFrameController {
 
 		num = 0;
 		numDecal = 0;
+		correctWords.clear();
 
-		csv_reader R = new csv_reader("src/application/files/l0.csv");
-		def.setText(R.vocFetcher(num,1));
+		R = new csv_reader("src/application/files/l0.csv");
+		System.out.println(R.fourFetcher(num,0));
+		def.setText(R.fourFetcher(num,1));
 		lessonsScreen.setVisible(true);
 	}
 
 	public void validateWord(){
-		if(answerField.getText().equals(R.vocFetcher(num,0))){
+		if(answerField.getText().equals(R.fourFetcher(num,0))){
 			if (num!=19){
 				hint.setText("Correct !");
-				correctWords.add(R.vocFetcher(num,0));
+				correctWords.add(R.fourFetcher(num,0));
 				lessonsL.setItems(correctWords);
 				num++;
 				numDecal++;
-				def.setText(R.vocFetcher(num,1));
+				def.setText(R.fourFetcher(num,1));
 			}
 			else {
 				String awt = "Your Score is" + Integer.toString(num-numDecal) +"/"+ Integer.toString(num);
 				def.setText("You finished all the words !");
 				hint.setText(awt);
-				correctWords.add(R.vocFetcher(num,0));
+				correctWords.add(R.fourFetcher(num,0));
 				lessonsL.setItems(correctWords);
 			}
 		}
@@ -101,13 +103,13 @@ public class mainFrameController {
 	}
 
 	public void helpPlease(){
-		hint.setText(R.vocFetcher(num,2));
+		hint.setText(R.fourFetcher(num,2));
 	}
 
 	public void skipPlease(){
-		hint.setText("The word was : " + R.vocFetcher(num,0));
+		hint.setText("The word was : " + R.fourFetcher(num,0));
 		num++;
-		def.setText(R.vocFetcher(num,1));
+		def.setText(R.fourFetcher(num,1));
 	}
 
 	public void showGlossary(){
