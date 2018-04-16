@@ -29,7 +29,7 @@ public class csv_reader {
 	}
 
 	public String fourFetcher(int i, int j){
-		return fileMatrice.get(4*i+j);
+		return fileMatrice.get(5*i+j);
 	}
 
 	public String gramChoiceFetcher(int i, int j){
