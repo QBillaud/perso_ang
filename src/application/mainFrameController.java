@@ -88,7 +88,7 @@ public class mainFrameController {
 				def.setText(R.vocFetcher(num,1));
 			}
 			else {
-				String awt = "Your Score is" + Integer.toString(numDecal);
+				String awt = "Your Score is" + Integer.toString(num-numDecal) +"/"+ Integer.toString(num);
 				def.setText("You finished all the words !");
 				hint.setText(awt);
 				correctWords.add(R.vocFetcher(num,0));
@@ -98,6 +98,16 @@ public class mainFrameController {
 		else{
 			hint.setText("Not Quite. Try again !");
 		}
+	}
+
+	public void helpPlease(){
+		hint.setText(R.vocFetcher(num,2));
+	}
+
+	public void skipPlease(){
+		hint.setText("The word was : " + R.vocFetcher(num,0));
+		num++;
+		def.setText(R.vocFetcher(num,1));
 	}
 
 	public void showGlossary(){

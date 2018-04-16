@@ -53,11 +53,11 @@
                <children>
                   <ListView fx:id="lessonsL" prefHeight="450.0" prefWidth="400.0" />
                   <TextField fx:id="answerField" layoutX="450.0" layoutY="371.0" prefHeight="25.0" prefWidth="232.0" />
-                  <Button fx:id="validateB" layoutX="682.0" layoutY="371.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Validate" />
+                  <Button fx:id="validateB" layoutX="682.0" layoutY="371.0" mnemonicParsing="false" onAction="#validateWord" prefHeight="25.0" prefWidth="75.0" text="Validate" />
                   <Label fx:id="def" layoutX="450.0" layoutY="37.0" prefHeight="100.0" prefWidth="300.0" />
-                  <Button fx:id="helpB" layoutX="574.0" layoutY="137.0" mnemonicParsing="false" text="Help !" />
+                  <Button fx:id="helpB" layoutX="574.0" layoutY="137.0" mnemonicParsing="false" onAction="#helpPlease" prefHeight="25.0" prefWidth="50.0" text="Help !" />
                   <Label fx:id="hint" layoutX="448.0" layoutY="162.0" prefHeight="100.0" prefWidth="300.0" />
-                  <Button fx:id="skipB" layoutX="572.0" layoutY="262.0" mnemonicParsing="false" text="Skip" />
+                  <Button fx:id="skipB" layoutX="572.0" layoutY="262.0" mnemonicParsing="false" onAction="#skipPlease" prefHeight="25.0" prefWidth="50.0" text="Skip" />
                </children>
             </AnchorPane>
          </children>
